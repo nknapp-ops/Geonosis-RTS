@@ -1,0 +1,14 @@
+const { chromium } = require('playwright'); const fs = require('fs'), path = require('path'); const DEPS = path.join(__dirname, 'node_modules/three');
+(async () => { const b = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] }); const p = await b.newPage();
+  p.on('pageerror', e => console.log('PAGEERROR', e.message));
+  await p.route('https://cdn.jsdelivr.net/npm/three@0.160.0/**', r => { const rel = r.request().url().split('three@0.160.0/')[1]; r.fulfill({ body: fs.readFileSync(path.join(DEPS, rel)), contentType: 'application/javascript' }); });
+  await p.route('https://cdn.jsdelivr.net/npm/meshoptimizer@1.2.0/**', r => r.abort()); await p.route('https://fonts.googleapis.com/**', r => r.fulfill({ body: '', contentType: 'text/css' }));
+  await p.addInitScript(f => { window.__F = f; }, process.argv[2]);
+  await p.goto('http://127.0.0.1:8765/index.html?quality=low'); await p.waitForSelector('#menu:not([hidden])', { timeout: 240000 });
+  console.log(await p.evaluate(async () => { const g = window.__geo, T = g.THREE; const gl = await new g.GLTFLoader().loadAsync('models/' + window.__F + '.glb'); const s = gl.scene; s.updateMatrixWorld(true);
+    const bb = new T.Box3().setFromObject(s); const k = 1; const out = ['bbox ' + bb.min.toArray().map(v => v.toFixed(3)) + ' / ' + bb.max.toArray().map(v => v.toFixed(3)) + ' scale-to-2.6 ' + k.toFixed(1)];
+    const P = o => o.getWorldPosition(new T.Vector3()).sub(bb.min).multiplyScalar(k).toArray().map(v => v.toFixed(2)).join(',');
+    const walk = (o, d) => { if (o.isBone || (o.name && !o.isMesh)) out.push(' '.repeat(d) + o.name + ' @' + P(o) + (o.isBone ? ' [bone]' : '') + ' ch' + o.children.filter(c => c.isMesh).length); for (const c of o.children) walk(c, d + 1); };
+    walk(s, 0); let meshes = []; s.traverse(o => { if (o.isMesh) meshes.push(o.name + (o.isSkinnedMesh ? '(sk)' : '')); }); out.push('meshes ' + meshes.join(' '));
+    return out.join('\n'); }));
+  await b.close(); })();

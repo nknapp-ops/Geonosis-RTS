@@ -1,0 +1,6 @@
+dev/node_modules/
+dev/out/
+dev/*.png
+dev/*.log
+node_modules/
+.DS_Store

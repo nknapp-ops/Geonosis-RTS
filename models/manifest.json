@@ -1,0 +1,1001 @@
+{
+ "_weapons": {
+  "dc15": {
+   "file": "dc15.glb",
+   "muzzle": "+x",
+   "len": 1.25,
+   "grip": [
+    0.26,
+    0.45
+   ],
+   "bore": 0.8,
+   "title": "Star Wars DC-15a",
+   "author": "LarsH. (sketchfab.com/LarsH.)",
+   "license": "CC-BY-4.0",
+   "source": "https://sketchfab.com/3d-models/star-wars-dc-15a-50739874329542308e289fd6457cddda",
+   "label": "DC-15A rifle"
+  },
+  "rps6": {
+   "file": "rps6.glb",
+   "muzzle": "+z",
+   "len": 1.3,
+   "grip": [
+    0.5,
+    0.55
+   ],
+   "bore": 0.6,
+   "title": "RPS-6 (Clone Trooper Rocket Launcher)",
+   "author": "David Short (sketchfab.com/davidshort)",
+   "license": "CC-BY-NC-4.0",
+   "source": "https://sketchfab.com/3d-models/rps-6-clone-trooper-rocket-launcher-a6e42985f2534875b513347ed0a41f6c",
+   "label": "RPS-6 launcher"
+  },
+  "e5": {
+   "file": "e5.glb",
+   "muzzle": "-x",
+   "len": 0.62,
+   "grip": [
+    0.35,
+    0.45
+   ],
+   "bore": 0.75,
+   "title": "E-5 Blaster rifle",
+   "author": "Sergio.Manzoni (sketchfab.com/Sergio.Manzoni)",
+   "license": "CC-BY-4.0",
+   "source": "https://sketchfab.com/3d-models/e-5-blaster-rifle-558a5f837f6f4e86b4845d201a316ef4",
+   "label": "E-5 blaster"
+  }
+ },
+ "laat": {
+  "file": "laat.glb",
+  "rotateY": 180
+ },
+ "aat": {
+  "file": "aat.glb",
+  "idle": "Static",
+  "walk": false,
+  "turret": {
+   "bone": "Head_01",
+   "len": 5
+  }
+ },
+ "atrt": {
+  "file": "atrt.glb",
+  "rig": {
+   "type": "walker2",
+   "ik": true,
+   "legs": [
+    [
+     "legA1",
+     "legA2",
+     "legA3"
+    ],
+    [
+     "legB1",
+     "legB2",
+     "legB3"
+    ]
+   ],
+   "step": 0.42,
+   "lift": 0.35,
+   "bob": 0.06
+  },
+  "rider": {
+   "model": "clone",
+   "bone": "root_00",
+   "at": [
+    0,
+    0.98,
+    -0.3
+   ],
+   "grips": [
+    "LeverA1",
+    "LeverB1"
+   ]
+  }
+ },
+ "atte": {
+  "file": "atte.glb",
+  "walk": false,
+  "turret": {
+   "bone": "Turret_12",
+   "len": 6.5
+  },
+  "rig": {
+   "type": "walker6",
+   "ik": true,
+   "legs": [
+    [
+     "LeftFrontLeg",
+     "LeftFrontLowLeg",
+     "LeftFrontAnkleIK"
+    ],
+    [
+     "RightFrontLeg",
+     "RightFrontLowLeg",
+     "RightFrontAnkleIK"
+    ],
+    [
+     "LeftMiddleLeg",
+     "LeftMiddleLowLeg",
+     "LeftMiddleAnkleIK"
+    ],
+    [
+     "RightMiddleLeg",
+     "RightMiddleLowLeg",
+     "RightMiddleAnkleIK"
+    ],
+    [
+     "LeftBackLeg",
+     "LeftBackLowLeg",
+     "LeftBackAnkleIK"
+    ],
+    [
+     "RightBackLeg",
+     "RightBackLowLeg",
+     "RightBackAnkleIK"
+    ]
+   ],
+   "step": 1.0,
+   "lift": 0.8,
+   "bob": 0.12
+  }
+ },
+ "b1": {
+  "file": "b1.glb",
+  "walk": false,
+  "rig": {
+   "type": "biped",
+   "map": {
+    "thigh": {
+     "-1": "Bone013",
+     "1": "Bone014"
+    },
+    "calf": {
+     "-1": "Bone015",
+     "1": "Bone017"
+    },
+    "foot": {
+     "-1": "Bone016",
+     "1": "Bone018"
+    },
+    "spine": "Bone023",
+    "head": "Bone002"
+   },
+   "step": 0.27,
+   "lift": 0.12,
+   "bob": 0.03,
+   "sway": 0.025,
+   "twist": 0.08,
+   "lean": 0.03
+  }
+ },
+ "clone": {
+  "file": "clone.glb",
+  "walk": false,
+  "fix": {
+   "hide": [
+    "Undersuit"
+   ],
+   "attach": [
+    {
+     "mat": "Helmet",
+     "bone": "Head",
+     "height": 0.19,
+     "up": 0.08,
+     "rotX": 180
+    }
+   ],
+   "suit": true
+  },
+  "rig": {
+   "type": "biped",
+   "armSwing": 0,
+   "poses": {
+    "carry": {
+     "R": {
+      "down": 76,
+      "fwd": 5,
+      "in": -15,
+      "bend": 85
+     },
+     "L": {
+      "down": 50,
+      "fwd": 45,
+      "in": -25,
+      "bend": 50
+     }
+    },
+    "aim": {
+     "R": {
+      "down": 82,
+      "fwd": 45,
+      "in": 35,
+      "bend": 100
+     },
+     "L": {
+      "down": 85,
+      "fwd": 80,
+      "in": 28,
+      "bend": 25
+     }
+    },
+    "walk": {
+     "R": {
+      "down": 72,
+      "fwd": 20,
+      "in": -10,
+      "bend": 90
+     },
+     "L": {
+      "down": 60,
+      "fwd": 40,
+      "in": -25,
+      "bend": 55
+     }
+    }
+   },
+   "mirror": true,
+   "kneel": true,
+   "kneelDrop": 0.5,
+   "step": 0.3,
+   "lift": 0.13,
+   "bob": 0.035,
+   "sway": 0.03,
+   "twist": 0.14,
+   "lean": 0.06
+  },
+  "attach": "dc15"
+ },
+ "heavy": {
+  "file": "clone.glb",
+  "walk": false,
+  "fix": {
+   "hide": [
+    "Undersuit"
+   ],
+   "attach": [
+    {
+     "mat": "Helmet",
+     "bone": "Head",
+     "height": 0.19,
+     "up": 0.08,
+     "rotX": 180
+    }
+   ],
+   "suit": true
+  },
+  "rig": {
+   "type": "biped",
+   "armSwing": 0,
+   "poses": {
+    "carry": {
+     "R": {
+      "down": 80,
+      "fwd": 55,
+      "in": 25,
+      "bend": 95
+     },
+     "L": {
+      "down": 80,
+      "fwd": 50,
+      "in": 0,
+      "bend": 60
+     }
+    }
+   },
+   "mirror": true,
+   "step": 0.3,
+   "lift": 0.13,
+   "bob": 0.035,
+   "sway": 0.03,
+   "twist": 0.14,
+   "lean": 0.06
+  },
+  "attach": "rps6"
+ },
+ "b2": {
+  "file": "b2.glb",
+  "tint": "#56627a",
+  "rough": 0.4,
+  "metal": 0.6,
+  "autoRig": {
+   "hip": 0.46,
+   "knee": 0.26,
+   "blend": 0.035,
+   "legWidth": 0.15,
+   "ankle": 0.07,
+   "arms": {
+    "-1": [
+     [
+      -0.33,
+      1.64,
+      -0.04
+     ],
+     [
+      -0.36,
+      1.42,
+      0.24
+     ],
+     [
+      -0.36,
+      1.88,
+      0.42
+     ]
+    ],
+    "1": [
+     [
+      0.33,
+      1.64,
+      -0.04
+     ],
+     [
+      0.39,
+      1.3,
+      0.03
+     ],
+     [
+      0.33,
+      0.93,
+      0.21
+     ]
+    ],
+    "yMin": 0.78,
+    "padY": 1.58,
+    "padZ": 0.09,
+    "xMin": [
+     0.22,
+     0.21
+    ],
+    "rMax": {
+     "-1": 0.22,
+     "1": 0.15
+    }
+   }
+  },
+  "rig": {
+   "type": "biped",
+   "armDown": 0,
+   "armFwd": 0,
+   "foreBend": 0,
+   "armSwing": 0,
+   "step": 0.27,
+   "lift": 0.11,
+   "bob": 0.06,
+   "sway": 0.05,
+   "twist": 0.06,
+   "lean": 0.03,
+   "wristAim": true
+  }
+ },
+ "droideka": {
+  "file": "droideka.glb"
+ },
+ "geo": {
+  "file": "geo.glb",
+  "rotateY": 180,
+  "autoRig": {
+   "type": "geonosian"
+  }
+ },
+ "hailfire": {
+  "file": "hailfire.glb",
+  "tint": "#6b6157",
+  "rough": 0.45,
+  "metal": 0.55
+ },
+ "spider": {
+  "file": "spider.glb",
+  "rig": {
+   "type": "spider",
+   "legs": [
+    [
+     "bone_l_f_legBase_1_",
+     "bone_l_f_pri_1"
+    ],
+    [
+     "bone_r_f_legBase_1_",
+     "bone_r_f_pri_1"
+    ],
+    [
+     "bone_r_b_legBase_1_",
+     "bone_r_b_pri_1"
+    ],
+    [
+     "bone_l_b_legBase_1_",
+     "bone_l_b_pri_1"
+    ]
+   ],
+   "stride": 0.18,
+   "lift": 0.15,
+   "cadence": 0.5
+  },
+  "turret": {
+   "bone": "bone_orb_rotate",
+   "len": 6.5,
+   "mz": {
+    "cannon": [
+     "bone_pitch_lowGun",
+     [
+      0,
+      0,
+      -0.105
+     ]
+    ],
+    "gun": [
+     "bone_pitch_upGun",
+     [
+      0,
+      0,
+      -0.078
+     ]
+    ]
+   },
+   "yaw0": -1.5708
+  }
+ },
+ "jedi": {
+  "file": "jedi.glb",
+  "walk": false,
+  "attach": "saber",
+  "rig": {
+   "type": "biped",
+   "armSwing": 1.0,
+   "lean": 0.12,
+   "poses": {
+    "carry": {
+     "R": {
+      "down": 0,
+      "fwd": 25,
+      "in": 0,
+      "bend": 40
+     },
+     "L": {
+      "down": 0,
+      "fwd": 8,
+      "in": 0,
+      "bend": 15
+     }
+    }
+   },
+   "step": 0.34,
+   "lift": 0.15,
+   "bob": 0.04,
+   "sway": 0.035,
+   "twist": 0.18
+  }
+ },
+ "jediB": {
+  "file": "jediKnight.glb",
+  "attach": "saber",
+  "rig": {
+   "type": "biped",
+   "armSwing": 1.0,
+   "lean": 0.12,
+   "poses": {
+    "carry": {
+     "R": {
+      "down": 0,
+      "fwd": 25,
+      "in": 0,
+      "bend": 40
+     },
+     "L": {
+      "down": 0,
+      "fwd": 8,
+      "in": 0,
+      "bend": 15
+     }
+    }
+   },
+   "step": 0.34,
+   "lift": 0.15,
+   "bob": 0.04,
+   "sway": 0.035,
+   "twist": 0.18
+  }
+ },
+ "jediG": {
+  "file": "jediKnight.glb",
+  "attach": "saber",
+  "rig": {
+   "type": "biped",
+   "armSwing": 1.0,
+   "lean": 0.12,
+   "poses": {
+    "carry": {
+     "R": {
+      "down": 0,
+      "fwd": 25,
+      "in": 0,
+      "bend": 40
+     },
+     "L": {
+      "down": 0,
+      "fwd": 8,
+      "in": 0,
+      "bend": 15
+     }
+    }
+   },
+   "step": 0.34,
+   "lift": 0.15,
+   "bob": 0.04,
+   "sway": 0.035,
+   "twist": 0.18
+  }
+ },
+ "hqCIS": {
+  "file": "coreship.glb"
+ },
+ "coreShip": {
+  "file": "coreship.glb"
+ },
+ "saber": {
+  "file": "saber.glb"
+ },
+ "engREP": {
+  "file": "engrep.glb",
+  "walk": false,
+  "size": 2.1,
+  "rig": {
+   "type": "biped",
+   "armSwing": 0,
+   "poses": {
+    "carry": {
+     "R": {
+      "down": 76,
+      "fwd": 5,
+      "in": -15,
+      "bend": 85
+     },
+     "L": {
+      "down": 50,
+      "fwd": 45,
+      "in": -25,
+      "bend": 50
+     }
+    },
+    "aim": {
+     "R": {
+      "down": 82,
+      "fwd": 45,
+      "in": 35,
+      "bend": 100
+     },
+     "L": {
+      "down": 85,
+      "fwd": 80,
+      "in": 28,
+      "bend": 25
+     }
+    },
+    "walk": {
+     "R": {
+      "down": 72,
+      "fwd": 20,
+      "in": -10,
+      "bend": 90
+     },
+     "L": {
+      "down": 60,
+      "fwd": 40,
+      "in": -25,
+      "bend": 55
+     }
+    }
+   },
+   "mirror": false,
+   "kneel": false,
+   "map": {
+    "upper": {
+     "-1": "Left_arm",
+     "1": "Right_arm"
+    },
+    "fore": {
+     "-1": "Left_elbow",
+     "1": "Right_elbow"
+    },
+    "hand": {
+     "-1": "Left_wrist",
+     "1": "Right_wrist"
+    },
+    "thigh": {
+     "-1": "Left_leg",
+     "1": "Right_leg"
+    },
+    "calf": {
+     "-1": "Left_knee",
+     "1": "Right_knee"
+    },
+    "foot": {
+     "-1": "Left_ankle",
+     "1": "Right_ankle"
+    },
+    "spine": "Spine",
+    "head": "Head",
+    "hips": "Hips"
+   },
+   "step": 0.3,
+   "lift": 0.13,
+   "bob": 0.035,
+   "sway": 0.03,
+   "twist": 0.14,
+   "lean": 0.06,
+   "kneelDrop": 0.5
+  },
+  "author": "Abel (sketchfab.com/abel76)",
+  "license": "CC-BY-NC-4.0",
+  "source": "https://sketchfab.com/3d-models/phase-i-clone-captain-d37a7179fb764e04980f19d3430c74e4",
+  "title": "Phase I Clone Captain",
+  "attach": "dc15"
+ },
+ "engCIS": {
+  "file": "engcis.glb",
+  "walk": false,
+  "size": 2.2,
+  "tint": "#c9ccd3",
+  "rig": {
+   "type": "biped",
+   "nodes": true,
+   "map": {
+    "thigh": {
+     "-1": "Bone004L",
+     "1": "Bone004R"
+    },
+    "calf": {
+     "-1": "Bone005R",
+     "1": "Bone005L"
+    },
+    "foot": {
+     "-1": "Bone006L",
+     "1": "Bone006R"
+    },
+    "spine": "Bone_5",
+    "head": "Bone008",
+    "hips": "Bone003",
+    "upper": {
+     "-1": "Bone001L",
+     "1": "Bone001R"
+    },
+    "fore": {
+     "-1": "Bone002R",
+     "1": "Bone002L"
+    },
+    "hand": {
+     "-1": "Bone009L",
+     "1": "Bone009R"
+    }
+   },
+   "step": 0.27,
+   "lift": 0.12,
+   "bob": 0.03,
+   "sway": 0.025,
+   "twist": 0.08,
+   "lean": 0.03,
+   "poses": {
+    "carry": {
+     "R": {
+      "down": 76,
+      "fwd": 5,
+      "in": -15,
+      "bend": 85
+     },
+     "L": {
+      "down": 50,
+      "fwd": 45,
+      "in": -25,
+      "bend": 50
+     }
+    },
+    "aim": {
+     "R": {
+      "down": 82,
+      "fwd": 45,
+      "in": 35,
+      "bend": 100
+     },
+     "L": {
+      "down": 85,
+      "fwd": 80,
+      "in": 28,
+      "bend": 25
+     }
+    },
+    "walk": {
+     "R": {
+      "down": 72,
+      "fwd": 20,
+      "in": -10,
+      "bend": 90
+     },
+     "L": {
+      "down": 60,
+      "fwd": 40,
+      "in": -25,
+      "bend": 55
+     }
+    }
+   },
+   "armSwing": 0
+  },
+  "author": "Andr\u00e9s Kuiper (sketchfab.com/kuiperesteve)",
+  "license": "CC-BY-4.0",
+  "source": "https://sketchfab.com/3d-models/battle-droid-b1-3ee39289d86a45cd894f61e269ea10ed",
+  "title": "Battle Droid B1",
+  "reparent": [
+   [
+    "Bone009L",
+    "Bone002R"
+   ],
+   [
+    "Bone009R",
+    "Bone002L"
+   ]
+  ],
+  "attach": "e5"
+ },
+ "commando": {
+  "file": "commando.glb",
+  "walk": false,
+  "size": 2.1,
+  "rig": {
+   "type": "biped",
+   "armSwing": 0,
+   "poses": {
+    "carry": {
+     "R": {
+      "down": 76,
+      "fwd": 5,
+      "in": -15,
+      "bend": 85
+     },
+     "L": {
+      "down": 50,
+      "fwd": 45,
+      "in": -25,
+      "bend": 50
+     }
+    },
+    "aim": {
+     "R": {
+      "down": 82,
+      "fwd": 45,
+      "in": 35,
+      "bend": 100
+     },
+     "L": {
+      "down": 85,
+      "fwd": 80,
+      "in": 28,
+      "bend": 25
+     }
+    },
+    "walk": {
+     "R": {
+      "down": 72,
+      "fwd": 20,
+      "in": -10,
+      "bend": 90
+     },
+     "L": {
+      "down": 60,
+      "fwd": 40,
+      "in": -25,
+      "bend": 55
+     }
+    }
+   },
+   "mirror": false,
+   "kneel": true,
+   "map": {
+    "upper": {
+     "-1": "Left_arm",
+     "1": "Right_arm"
+    },
+    "fore": {
+     "-1": "Left_elbow",
+     "1": "Right_elbow"
+    },
+    "hand": {
+     "-1": "Left_wrist",
+     "1": "Right_wrist"
+    },
+    "thigh": {
+     "-1": "Left_leg",
+     "1": "Right_leg"
+    },
+    "calf": {
+     "-1": "Left_knee",
+     "1": "Right_knee"
+    },
+    "foot": {
+     "-1": "Left_ankle",
+     "1": "Right_ankle"
+    },
+    "spine": "Spine",
+    "head": "Head",
+    "hips": "Hips"
+   },
+   "step": 0.3,
+   "lift": 0.13,
+   "bob": 0.035,
+   "sway": 0.03,
+   "twist": 0.14,
+   "lean": 0.06,
+   "kneelDrop": 0.5
+  },
+  "attach": "dc15",
+  "author": "Abel (sketchfab.com/abel76)",
+  "license": "CC-BY-NC-4.0",
+  "source": "https://sketchfab.com/3d-models/republic-commando-30959b9c2ddb475085eaccdcb00e2dd8"
+ },
+ "spha": {
+  "file": "atte.glb",
+  "walk": false,
+  "turret": {
+   "bone": "Turret_12",
+   "len": 6.5
+  },
+  "rig": {
+   "type": "walker6",
+   "ik": true,
+   "legs": [
+    [
+     "LeftFrontLeg",
+     "LeftFrontLowLeg",
+     "LeftFrontAnkleIK"
+    ],
+    [
+     "RightFrontLeg",
+     "RightFrontLowLeg",
+     "RightFrontAnkleIK"
+    ],
+    [
+     "LeftMiddleLeg",
+     "LeftMiddleLowLeg",
+     "LeftMiddleAnkleIK"
+    ],
+    [
+     "RightMiddleLeg",
+     "RightMiddleLowLeg",
+     "RightMiddleAnkleIK"
+    ],
+    [
+     "LeftBackLeg",
+     "LeftBackLowLeg",
+     "LeftBackAnkleIK"
+    ],
+    [
+     "RightBackLeg",
+     "RightBackLowLeg",
+     "RightBackAnkleIK"
+    ]
+   ],
+   "step": 1.0,
+   "lift": 0.8,
+   "bob": 0.12
+  },
+  "tint": "#c9c3b0"
+ },
+ "transport": {
+  "file": "coreship.glb",
+  "tint": "#b9a891"
+ },
+ "dwarf": {
+  "file": "dwarf.glb",
+  "rotateY": -45,
+  "rig": {
+   "type": "walker4",
+   "ik": true,
+   "legs": [
+    [
+     "bone_l_f_thigh",
+     "bone_l_f_knee",
+     "bone_l_f_ankle"
+    ],
+    [
+     "bone_r_f_thigh",
+     "bone_r_f_knee",
+     "bone_r_f_ankle"
+    ],
+    [
+     "bone_l_b_thigh",
+     "bone_l_b_knee",
+     "bone_l_b_ankle"
+    ],
+    [
+     "bone_r_b_thigh",
+     "bone_r_b_knee",
+     "bone_r_b_ankle"
+    ]
+   ],
+   "tripod": [
+    0,
+    1,
+    1,
+    0
+   ],
+   "step": 0.32,
+   "lift": 0.22,
+   "bob": 0.06
+  },
+  "pistons": [
+   [
+    "bone_l_f_upshock_a",
+    "bone_l_f_upshock_b"
+   ],
+   [
+    "bone_l_f_midshock_a",
+    "bone_l_f_midshock_b"
+   ],
+   [
+    "bone_l_f_loshock_a",
+    "bone_l_f_loshock_b"
+   ],
+   [
+    "bone_r_f_upshock_a",
+    "bone_r_f_upshock_b"
+   ],
+   [
+    "bone_r_f_midshock_a",
+    "bone_r_f_midshock_b"
+   ],
+   [
+    "bone_r_f_loshock_a",
+    "bone_r_f_loshock_b"
+   ],
+   [
+    "bone_l_b_upshock_a",
+    "bone_l_b_upshock_b"
+   ],
+   [
+    "bone_l_b_midshock_a",
+    "bone_l_b_midshock_b"
+   ],
+   [
+    "bone_l_b_loshock_a",
+    "bone_l_b_loshock_b"
+   ],
+   [
+    "bone_r_b_upshock_a",
+    "bone_r_b_upshock_b"
+   ],
+   [
+    "bone_r_b_midshock_a",
+    "bone_r_b_midshock_b"
+   ],
+   [
+    "bone_r_b_loshock_a",
+    "bone_r_b_loshock_b"
+   ]
+  ],
+  "turret": {
+   "bone": "bonehead",
+   "len": 1.15,
+   "up": -0.05
+  },
+  "author": "Mind Mulch for The Masses (sketchfab.com/mindmulchforthemasses)",
+  "source": "https://sketchfab.com/3d-models/dwarf-spider-droid-4f5d54b98b744c439a14fd897b946a4e",
+  "license": "CC-BY-4.0"
+ },
+ "turretREP": {
+  "file": "turret.glb",
+  "turretNode": "Turret",
+  "size": 4.6,
+  "title": "Hoth Defense Turret - Star Wars",
+  "author": "Quiznos323 (sketchfab.com/quiznos323)",
+  "license": "CC-BY-NC-SA-4.0",
+  "source": "https://sketchfab.com/3d-models/hoth-defense-turret-star-wars-c675f652cce94a7b9fb143ac4d83220d"
+ },
+ "turretCIS": {
+  "file": "turret.glb",
+  "turretNode": "Turret",
+  "size": 5.4,
+  "title": "Hoth Defense Turret - Star Wars",
+  "author": "Quiznos323 (sketchfab.com/quiznos323)",
+  "license": "CC-BY-NC-SA-4.0",
+  "source": "https://sketchfab.com/3d-models/hoth-defense-turret-star-wars-c675f652cce94a7b9fb143ac4d83220d",
+  "tint": "#c2a47e"
+ }
+}

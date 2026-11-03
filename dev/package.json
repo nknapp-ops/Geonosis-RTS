@@ -1,0 +1,10 @@
+{
+  "name": "geonosis-rts-dev",
+  "private": true,
+  "description": "Test harnesses and model tools. Playwright + Chromium come preinstalled in Claude cloud sessions; elsewhere also run `npm i playwright && npx playwright install chromium`.",
+  "dependencies": {
+    "three": "0.160.0",
+    "meshoptimizer": "1.2.0",
+    "@gltf-transform/cli": "^4.5.1"
+  }
+}

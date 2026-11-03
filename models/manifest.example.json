@@ -1,0 +1,5 @@
+{
+  "atte":  { "file": "atte.glb", "rotateY": 0 },
+  "clone": { "file": "clone_trooper.glb", "rotateY": 180, "walk": "Walk", "idle": "Idle" },
+  "aat":   { "file": "aat.glb", "rotateY": 90 }
+}
